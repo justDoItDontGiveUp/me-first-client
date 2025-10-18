@@ -15,6 +15,7 @@ import { Header } from './components/homePage/Header';
 import './App.js';
 
 
+
 function App() {
   const { isLoggedIn } = useAuth();
   const location = useLocation();
