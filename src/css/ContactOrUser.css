@@ -1,0 +1,175 @@
+
+.component-1 {
+  flex-shrink: 0;
+  width: 276px;
+  height: 340px;
+  position: relative;
+  background-color: white;
+  border-radius: 25px;
+  height: 350px;
+  margin: 5px;
+}
+.david-shalom {
+  color: #000000;
+  text-align: center;
+  font-family: var(---font-family, "PloniMlV2Aaa-DemiBold", sans-serif);
+  font-size: var(---font-size, 14px);
+  font-weight: var(---font-weight, 400);
+  position: absolute;
+  right: 33.7%;
+  left: 35.51%;
+  width: 30.8%;
+  bottom: 57.06%;
+  top: 38.53%;
+  height: 4.41%;
+}
+.ellipse-19 {
+  background: #d9d9d9;
+  border-radius: 50%;
+  width: 29.71%;
+  height: 24.12%;
+  position: absolute;
+  right: 34.06%;
+  left: 36.23%;
+  bottom: 63.53%;
+  top: 12.35%;
+}
+.frame-50 {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  align-items: flex-start;
+  justify-content: flex-start;
+  width: 72.83%;
+  height: 28.24%;
+  position: absolute;
+  right: 13.41%;
+  left: 13.77%;
+  bottom: 22.65%;
+  top: 49.12%;
+}
+.frame-46 {
+  display: flex;
+  flex-direction: row;
+  gap: 6px;
+  align-items: center;
+  justify-content: flex-start;
+  flex-shrink: 0;
+  position: relative;
+}
+.company {
+  color: #000000;
+  text-align: right;
+  font-family: var(---font-family, "PloniMlV2Aaa-DemiBold", sans-serif);
+  font-size: var(---font-size, 14px);
+  font-weight: var(---font-weight, 400);
+  position: relative;
+}
+.ivory {
+  color: #000000;
+  text-align: right;
+  font-family: var(---font-family, "PloniMlV2Aaa-Regular", sans-serif);
+  font-size: var(---font-size, 14px);
+  font-weight: var(---font-weight, 400);
+  position: relative;
+}
+.frame-47 {
+  display: flex;
+  flex-direction: row;
+  gap: 6px;
+  align-items: center;
+  justify-content: flex-start;
+  flex-shrink: 0;
+  position: relative;
+}
+.frame-48 {
+  display: flex;
+  flex-direction: row;
+  gap: 6px;
+  align-items: center;
+  justify-content: flex-start;
+  flex-shrink: 0;
+  position: relative;
+}
+.frame-49 {
+  display: flex;
+  flex-direction: row;
+  gap: 6px;
+  align-items: center;
+  justify-content: flex-start;
+  align-self: stretch;
+  flex-shrink: 0;
+  position: relative;
+}
+.edit-02 {
+  width: 4.71%;
+  height: 3.82%;
+  position: absolute;
+  right: 8.7%;
+  left: 86.59%;
+  bottom: 92.06%;
+  top: 4.12%;
+  overflow: visible;
+}
+.trash-02 {
+  width: 3.99%;
+  height: 3.24%;
+  position: absolute;
+  right: 16.67%;
+  left: 79.35%;
+  bottom: 92.35%;
+  top: 4.41%;
+  overflow: visible;
+}
+.frame-5 {
+  background: #d9d9d9;
+  border-radius: 5px;
+  padding: 10px;
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  align-items: center;
+  justify-content: center;
+  width: 61.96%;
+  height: 10.88%;
+  position: absolute;
+  right: 18.84%;
+  left: 19.2%;
+  bottom: 6.18%;
+  top: 65.94%;
+}
+.details {
+  color: #000000;
+  text-align: left;
+  font-family: "Inter-Bold", sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  position: relative;
+}
+.play-03 {
+  width: 4.71%;
+  height: 3.82%;
+  position: absolute;
+  right: 23.91%;
+  left: 71.38%;
+  bottom: 92.06%;
+  top: 4.12%;
+  overflow: visible;
+}
+.contact-container{
+  width: 250px;
+  background-color: white;
+  border-radius: 25px;
+  display: flex;
+  margin: 5px;
+}
+.agents-container, .contacts-container{
+  display: flex;
+  gap: 15px;
+  flex-direction: row;
+  width: 800px;
+}
+.contacts-container{
+  display: flex;
+  flex-direction: row;
+}

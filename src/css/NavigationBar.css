@@ -1,0 +1,100 @@
+/* ===== Header ===== */
+.header-container {
+  position: sticky;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 60px;
+  background-color: #b91c1c;
+  color: white;
+  display: flex;
+  align-items: center;
+  padding: 0 1.5rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  z-index: 1000;
+}
+
+/* ===== Layout כללי ===== */
+.app-layout {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  width: 100%;
+  overflow: hidden;
+  background-color: white;
+}
+
+/* ===== גוף העמוד מתחת להדר ===== */
+.main-layout {
+  display: flex;
+  flex: 1;
+  width: 100%;
+  overflow: hidden;
+  background-color: white;
+}
+
+/* ===== Sidebar ===== */
+.sidebar {
+  width: 260px;
+  background-color: #d1e7fb;
+  padding: 1.5rem 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  overflow-y: auto;
+  box-shadow: inset -1px 0 0 #ccc;
+  transition: width 0.3s ease;
+}
+
+.sidebar.closed {
+  width: 60px;
+  align-items: center;
+  padding: 1.5rem 0.5rem;
+}
+
+.menu-toggle {
+  cursor: pointer;
+  margin-bottom: 1.5rem;
+  align-self: flex-end;
+}
+
+.menu-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: #000;
+  text-decoration: none;
+  font-family: "PloniMlV2Aaa-Medium", sans-serif;
+  font-size: 16px;
+  padding: 0.5rem 0.75rem;
+  border-radius: 8px;
+  transition: background-color 0.2s ease;
+}
+
+.menu-item:hover {
+  background-color: rgba(0, 0, 0, 0.05);
+}
+
+.menu-text {
+  white-space: nowrap;
+}
+
+.sidebar.closed .menu-text {
+  display: none;
+}
+
+/* ===== תוכן ראשי ===== */
+.main-content {
+  flex: 1;
+  padding: 1.5rem;
+  overflow-y: auto;
+  background-color: #f9fafb;
+  min-width: 0;
+  height: calc(100vh - 60px);
+  box-sizing: border-box;
+}
+
+.navbar{
+  display: flex;
+  height: 100%;
+}

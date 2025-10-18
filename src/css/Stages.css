@@ -1,0 +1,39 @@
+.frame-65,
+.frame-65 * {
+  box-sizing: border-box;
+}
+
+.frame-65 {
+  background: #ffffff; /* לבן */
+  border-radius: 10px;
+  padding: 10px 16px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  height: auto;
+  min-height: 40px;
+  position: relative;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06); /* צל עדין */
+  transition: box-shadow 0.3s ease;
+  margin-bottom: 1rem;
+}
+
+.frame-65:hover {
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1); /* צל חזק יותר בהובר */
+}
+
+.stages-container {
+  width: 95%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.content {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}

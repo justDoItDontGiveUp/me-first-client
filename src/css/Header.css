@@ -1,0 +1,168 @@
+/* בסיס כללי */
+.header-container {
+  position: sticky;
+  top: 0;
+  background-color: #d1e7fb;
+  padding: 1rem 1.5rem;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: space-between; 
+  align-items: center;   
+  max-width: 98%;
+}
+
+/* שורה ראשית */
+.frame-72 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2rem;
+}
+
+/* לוגו */
+.logo {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #1e293b;
+  font-family: "Segoe UI", sans-serif;
+}
+
+/* פרטי משתמש והתראות */
+.frame-71 {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+/* אזור ימין */
+.frame-70 {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.notification {
+  width: 24px;
+  height: 24px;
+  cursor: pointer;
+}
+
+.frame-69 {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.group-4 .ellipse-1 {
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  object-fit: cover;
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.2);
+}
+
+/* פרטי משתמש */
+.frame-68 {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.frame-67 {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.2;
+}
+
+.seving-aslanova {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #1f2937;
+}
+
+.seving-aslanova2 {
+  font-size: 0.75rem;
+  color: #6b7280;
+}
+
+.vector {
+  width: 16px;
+  height: auto;
+}
+
+/* כפתור התנתקות */
+.logout-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background-color: #dc2626;
+  color: #fff;
+  padding: 0.5rem 1rem;
+  border-radius: 10px;
+  text-decoration: none;
+  font-size: 0.9rem;
+  font-weight: 500;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  cursor: pointer;
+}
+
+.logout-button:hover {
+  background-color: #b91c1c;
+  transform: scale(1.05);
+}
+
+/* כותרת העמוד */
+.page-title {
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: #1f2937;
+  padding: 0 1.5rem;
+}
+
+/* רספונסיביות */
+@media (max-width: 768px) {
+  .frame-72 {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+
+  .frame-71,
+  .frame-70,
+  .frame-69 {
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .page-title {
+    font-size: 1.25rem;
+    padding: 0 1rem;
+  }
+}
+
+.title{
+  font-size: xx-large;
+  color: rgb(255, 255, 255);
+}
+
+.username{
+  color: #1f2937;
+}
+.profile{
+  color: black;
+  width: 60px;
+}
+.userRole{
+  font-size: x-large;
+  color: black;
+}
+
+.profilee{
+  display: flex;
+  align-content: center;
+}
+
+.endheader{
+  display: flex;
+  padding: 10px;
+}

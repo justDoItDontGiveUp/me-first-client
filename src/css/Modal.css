@@ -1,0 +1,19 @@
+/* עבור המודאל (אם אין לך כבר) */
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.4);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal-content {
+  background-color: white;
+  border-radius: 12px;
+  padding: 24px;
+  max-width: 500px;
+  width: 40%;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+}
