@@ -8,7 +8,7 @@ export function ContactCard({ contact, username, onUpdated, onDeleted }) {
 
   const handleDelete = async () => {
     const token = localStorage.getItem('token');
-    const res = await fetch(`http://localhost:3333/${username}/contacts/${contact.contact_type}s/delete/${contact.contact_name}`, {
+    const res = await fetch(`https://erp-backend-service-465064762453.me-west1.run.app/${username}/contacts/${contact.contact_type}s/delete/${contact.contact_name}`, {
       method: 'DELETE',
       headers: {
         'Authorization': `Bearer ${token}`,
@@ -26,7 +26,7 @@ export function ContactCard({ contact, username, onUpdated, onDeleted }) {
 
   const handleUpdate = async (updatedData) => {
     const token = localStorage.getItem('token');
-    const res = await fetch(`http://localhost:3333/${username}/contacts/${contact.contact_type}/update/${contact.contact_name}`, {
+    const res = await fetch(`https://erp-backend-service-465064762453.me-west1.run.app/${username}/contacts/${contact.contact_type}/update/${contact.contact_name}`, {
       method: 'PUT',
       headers: {
         'Authorization': `Bearer ${token}`,

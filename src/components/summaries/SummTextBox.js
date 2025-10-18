@@ -14,7 +14,7 @@ import '../../css/Summaries.css'
 
 //     const fetchSummeryFilePath = async () => {
 //         try {
-//             const res = await fetch(`http://localhost:3333/${username}/documents/getFilePath/${projectId}/Summaries`, {
+//             const res = await fetch(`https://erp-backend-service-465064762453.me-west1.run.app/${username}/documents/getFilePath/${projectId}/Summaries`, {
 //                 method: 'GET',
 //                 headers: {
 //                     Authorization: 'Bearer ' + token,
@@ -41,7 +41,7 @@ import '../../css/Summaries.css'
 //     const handleAddSumm = async () => {
 //         if (!inputText.trim() || !documentId) return;
 //         try {
-//             const res = await fetch(`http://localhost:3333/${username}/summaries/${projectId}/addSummaryRow`, {
+//             const res = await fetch(`https://erp-backend-service-465064762453.me-west1.run.app/${username}/summaries/${projectId}/addSummaryRow`, {
 //                 method: 'POST',
 //                 headers: {
 //                     'Content-Type': 'application/json',
@@ -90,7 +90,7 @@ export function SummTextBox({ projectId, username, onSummaryAdded }) {
         setLoading(true);
 
         try {
-            const res = await fetch(`http://localhost:3333/${username}/summaries/${projectId}/addSummaryRow`, {
+            const res = await fetch(`https://erp-backend-service-465064762453.me-west1.run.app/${username}/summaries/${projectId}/addSummaryRow`, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',

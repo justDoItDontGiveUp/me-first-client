@@ -14,7 +14,7 @@ export function Products() {
 
   const fetchProducts = async () => {
     const token = localStorage.getItem("token");
-    const res = await fetch(`http://localhost:3333/${username}/products`, {
+    const res = await fetch(`https://erp-backend-service-465064762453.me-west1.run.app/${username}/products`, {
       headers: { Authorization: `Bearer ${token}` },
     });
     const data = await res.json();
@@ -23,7 +23,7 @@ export function Products() {
 
   const handleDelete = async (product) => {
     try {
-      const response = await fetch(`http://localhost:3333/${username}/products/${product.product_id}`, {
+      const response = await fetch(`https://erp-backend-service-465064762453.me-west1.run.app/${username}/products/${product.product_id}`, {
         method: "DELETE",
         headers: {
           'Authorization': 'Bearer ' + localStorage.getItem('token'),

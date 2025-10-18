@@ -21,7 +21,7 @@ export function Project({ project, onEdit, onHold }) {
 
     const fetchCompletedStagesAmount = async () => {
         try {
-            const res = await fetch(`http://localhost:3333/${username}/stages/completed/${project.project_id}`, {
+            const res = await fetch(`https://erp-backend-service-465064762453.me-west1.run.app/${username}/stages/completed/${project.project_id}`, {
                 method: 'GET',
                 headers: {
                     Authorization: `Bearer ${token}`,

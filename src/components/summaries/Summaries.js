@@ -14,7 +14,7 @@ import "../../css/Summaries.css";
 
 //   const fetchSummaries = async () => {
 //     try {
-//       const res = await fetch(`http://localhost:3333/summaries/${projectId}`, {
+//       const res = await fetch(`https://erp-backend-service-465064762453.me-west1.run.app/summaries/${projectId}`, {
 //         headers: {
 //           Authorization: `Bearer ${localStorage.getItem("token")}`,
 //         },
@@ -34,7 +34,7 @@ import "../../css/Summaries.css";
 //     if (!summaryText.trim()) return;
 
 //     try {
-//       const res = await fetch(`http://localhost:3333/summaries`, {
+//       const res = await fetch(`https://erp-backend-service-465064762453.me-west1.run.app/summaries`, {
 //         method: "POST",
 //         headers: {
 //           "Content-Type": "application/json",
@@ -105,7 +105,7 @@ export function Summaries({ projectId, username }) {
     setError(null);
 
     try {
-      const res = await fetch(`http://localhost:3333/${username}/summaries/${projectId}/summaries`, {
+      const res = await fetch(`https://erp-backend-service-465064762453.me-west1.run.app/${username}/summaries/${projectId}/summaries`, {
         headers: {
           Authorization: "Bearer " + token,
         },

@@ -12,7 +12,7 @@ export function Stages({ projectId, username, onStageSelect }) {
 
     const fetchProjectStages = async () => {
         try {
-            const res = await fetch(`http://localhost:3333/${username}/stages/${projectId}`, {
+            const res = await fetch(`https://erp-backend-service-465064762453.me-west1.run.app/${username}/stages/${projectId}`, {
                 method: 'GET',
                 headers: {
                     Authorization: `Bearer ${localStorage.getItem('token')}`,

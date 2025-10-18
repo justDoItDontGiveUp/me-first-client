@@ -19,7 +19,7 @@ export function Agents() {
 
   const fetchAgents = async () => {
     try {
-      const response = await fetch(`http://localhost:3333/${username}/users/agents/all`, {
+      const response = await fetch(`https://erp-backend-service-465064762453.me-west1.run.app/${username}/users/agents/all`, {
         method: 'GET',
         headers: {
           'Authorization': `Bearer ${token}`,
@@ -39,7 +39,7 @@ export function Agents() {
     const { password, ...userData } = formData;
     console.log("📦 Sending formData:", userData);
     try {
-      const response = await fetch(`http://localhost:3333/${username}/users/addAgent`, {
+      const response = await fetch(`https://erp-backend-service-465064762453.me-west1.run.app/${username}/users/addAgent`, {
         method: 'POST',
         headers: {
           'Authorization': `Bearer ${token}`,
@@ -52,7 +52,7 @@ export function Agents() {
       const addedUser = await response.json();
       console.log("🪵 addedUser from backend:", addedUser);
       console.log("✅ Sending password to /passwords/new' ", password, addedUser.user_id);
-      const passwordResponse = await fetch(`http://localhost:3333/${username}/passwords/new`, {
+      const passwordResponse = await fetch(`https://erp-backend-service-465064762453.me-west1.run.app/${username}/passwords/new`, {
         method: 'POST',
         headers: {
           'Authorization': `Bearer ${token}`,

@@ -23,7 +23,7 @@ export function ProjectDisplay() {
 
   const fetchProject = async () => {
     try {
-      const response = await fetch(`http://localhost:3333/${username}/projects/single/${projectId}`, {
+      const response = await fetch(`https://erp-backend-service-465064762453.me-west1.run.app/${username}/projects/single/${projectId}`, {
         method: 'GET',
         headers: {
           'Authorization': `Bearer ${localStorage.getItem('token')}`,
@@ -42,7 +42,7 @@ export function ProjectDisplay() {
 
   const setLastVisiTime = async () => {
     try {
-      const response = await fetch(`http://localhost:3333/${username}/projects/visit/${projectId}`, {
+      const response = await fetch(`https://erp-backend-service-465064762453.me-west1.run.app/${username}/projects/visit/${projectId}`, {
         method: 'PUT',
         headers: {
           'Authorization': `Bearer ${localStorage.getItem('token')}`,

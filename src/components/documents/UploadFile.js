@@ -17,7 +17,7 @@ export function UploadFile({ projectId, docType, token }) {
         const formData = new FormData();
         formData.append('file', file);
 
-        const response = await fetch(`http://localhost:3333/${projectId}/upload/${docType}`, {
+        const response = await fetch(`https://erp-backend-service-465064762453.me-west1.run.app/${projectId}/upload/${docType}`, {
             method: 'POST',
             headers: {
                 Authorization: `Bearer ${token}`, 

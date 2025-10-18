@@ -9,7 +9,7 @@ export function AddDocument({ stageId, projectId, docType, onSuccess }) {
     try {
       setLoading(true);
       const token = localStorage.getItem('token');
-      const res = await fetch(`http://localhost:3333/documents/${stageId}/create`, {
+      const res = await fetch(`https://erp-backend-service-465064762453.me-west1.run.app/documents/${stageId}/create`, {
         method: 'POST',
         headers: {
           'Authorization': 'Bearer ' + token,

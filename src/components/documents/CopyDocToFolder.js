@@ -4,7 +4,7 @@ export const CopyDocToFolder = async ({ projectId, docType, stageId, token, user
                 projectId, docType, stageId, userId, username
             });
     try {
-        const res = await fetch(`http://localhost:3333/${username}/documents/copy`, {
+        const res = await fetch(`https://erp-backend-service-465064762453.me-west1.run.app/${username}/documents/copy`, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',

@@ -26,7 +26,7 @@ export function StageDisplay({ username, projectId, stageId }) {
     const fetchUserId = async () => {
         try {
             console.log('in fetchUser');
-            const res = await fetch(`http://localhost:3333/${username}/users/userId/${username}`, {
+            const res = await fetch(`https://erp-backend-service-465064762453.me-west1.run.app/${username}/users/userId/${username}`, {
                 method: 'GET',
                 headers: {
                     Authorization: `Bearer ${token}`,
@@ -46,7 +46,7 @@ export function StageDisplay({ username, projectId, stageId }) {
     const fetchStage = async () => {
         try {
             console.log('in fetchStage');
-            const res = await fetch(`http://localhost:3333/${username}/stages/display/${stageId}`, {
+            const res = await fetch(`https://erp-backend-service-465064762453.me-west1.run.app/${username}/stages/display/${stageId}`, {
                 method: 'GET',
                 headers: {
                     Authorization: `Bearer ${token}`,
@@ -64,7 +64,7 @@ export function StageDisplay({ username, projectId, stageId }) {
     const fetchProjectProducts = async () => {
         try {
             //גם פה פונים לטבלת קשר בין פרוייקטים ומוצרים
-            const res = await fetch(`http://localhost:3333/${username}/${stageId}`, {
+            const res = await fetch(`https://erp-backend-service-465064762453.me-west1.run.app/${username}/${stageId}`, {
                 method: 'GET',
                 headers: {
                     Authorization: `Bearer ${token}`,
@@ -84,7 +84,7 @@ export function StageDisplay({ username, projectId, stageId }) {
     const updatedCompleted = !stage.completed;
     const updatedCompletionDate = updatedCompleted ? new Date().toISOString() : null;
 
-    const res = await fetch(`http://localhost:3333/${username}/stages/completed/${stageId}`, {
+    const res = await fetch(`https://erp-backend-service-465064762453.me-west1.run.app/${username}/stages/completed/${stageId}`, {
       method: 'PUT',
       headers: {
         Authorization: `Bearer ${token}`,

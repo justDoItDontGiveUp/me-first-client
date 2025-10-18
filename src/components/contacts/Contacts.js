@@ -11,7 +11,7 @@ export function Contacts({ type }) {
   const [showForm, setShowForm] = useState(false);
   const { username } = useParams();
 
-  const endpoint = `http://localhost:3333/${username}/contacts/${type}s`;
+  const endpoint = `https://erp-backend-service-465064762453.me-west1.run.app/${username}/contacts/${type}s`;
 
   useEffect(() => {
     fetchContacts();
@@ -34,7 +34,7 @@ export function Contacts({ type }) {
       ...newData,
       contact_type: type, // ← מוסיף contact_type לפי סוג הדף
     };
-    const addUrl = `http://localhost:3333/${username}/contacts/${type}/add/${newData.contact_name}`;
+    const addUrl = `https://erp-backend-service-465064762453.me-west1.run.app/${username}/contacts/${type}/add/${newData.contact_name}`;
     const res = await fetch(addUrl, {
       method: 'POST',
       headers: {

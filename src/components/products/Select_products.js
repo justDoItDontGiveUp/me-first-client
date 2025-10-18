@@ -14,7 +14,7 @@ export function Select_products() {
   const fetchAllProducts = async () => {
     try {
       const token = localStorage.getItem("token");
-      const res = await fetch(`http://localhost:3333/${username}/products`, {
+      const res = await fetch(`https://erp-backend-service-465064762453.me-west1.run.app/${username}/products`, {
         headers: { Authorization: `Bearer ${token}` },
       });
       const data = await res.json();
@@ -27,7 +27,7 @@ export function Select_products() {
   const fetchProjectProducts = async () => {
     try {
       const token = localStorage.getItem("token");
-      const res = await fetch(`http://localhost:3333/${username}/project_products/${projectId}/products`, {
+      const res = await fetch(`https://erp-backend-service-465064762453.me-west1.run.app/${username}/project_products/${projectId}/products`, {
         headers: { Authorization: `Bearer ${token}` },
       });
       const data = await res.json();
@@ -54,7 +54,7 @@ export function Select_products() {
   const handleSaveSelection = async () => {
     try {
       const token = localStorage.getItem("token");
-      const res = await fetch(`http://localhost:3333/${username}/project_products/${projectId}/products`, {
+      const res = await fetch(`https://erp-backend-service-465064762453.me-west1.run.app/${username}/project_products/${projectId}/products`, {
         method: "PUT",
         headers: {
           Authorization: `Bearer ${token}`,

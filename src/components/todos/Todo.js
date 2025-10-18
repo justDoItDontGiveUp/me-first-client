@@ -8,7 +8,7 @@ export function Todo({ todo, onUpdate, onEdit }) {
   const toggleComplete = async () => {
 
     try {
-      const res = await fetch(`http://localhost:3333/${username}/todos/${todo.todo_id}`, {
+      const res = await fetch(`https://erp-backend-service-465064762453.me-west1.run.app/${username}/todos/${todo.todo_id}`, {
         method: "PUT",
         headers: {
           "Content-Type": "application/json",
@@ -25,7 +25,7 @@ export function Todo({ todo, onUpdate, onEdit }) {
 
   const handleDelete = async () => {
     try {
-      const res = await fetch(`http://localhost:3333/${username}/todos/${todo.todo_id}`, {
+      const res = await fetch(`https://erp-backend-service-465064762453.me-west1.run.app/${username}/todos/${todo.todo_id}`, {
         method: "DELETE",
         headers: {
           Authorization: `Bearer ${localStorage.getItem("token")}`,

@@ -15,7 +15,7 @@ const AddUser = () => {
 
     const onAddAgent = (newAgent) => {
         try {
-            const response=fetch('http://localhost:3333/addUser', {
+            const response=fetch('https://erp-backend-service-465064762453.me-west1.run.app/addUser', {
                 method: 'POST',
                 body: JSON.stringify(newAgent)
             });

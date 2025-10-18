@@ -27,7 +27,7 @@ export function Projects() {
 
   const fetchAagentProjects = async () => {
     try {
-      const res = await fetch(`http://localhost:3333/${username}/projects/${agentName}`, {
+      const res = await fetch(`https://erp-backend-service-465064762453.me-west1.run.app/${username}/projects/${agentName}`, {
         method: 'GET',
         headers: {
           Authorization: `Bearer ${localStorage.getItem('token')}`,
@@ -44,7 +44,7 @@ export function Projects() {
 
   const fetchProjects = async () => {
     try {
-      const res = await fetch(`http://localhost:3333/${username}/projects/${projectStatus}/all`, {
+      const res = await fetch(`https://erp-backend-service-465064762453.me-west1.run.app/${username}/projects/${projectStatus}/all`, {
         method: 'GET',
         headers: {
           Authorization: `Bearer ${localStorage.getItem('token')}`,
@@ -64,7 +64,7 @@ export function Projects() {
     if (!window.confirm("Are you sure you want to delete this project?")) return;
 
     try {
-      const res = await fetch(`http://localhost:3333/${username}/projects/${projectId}`, {
+      const res = await fetch(`https://erp-backend-service-465064762453.me-west1.run.app/${username}/projects/${projectId}`, {
         method: 'DELETE',
         headers: {
           Authorization: `Bearer ${localStorage.getItem('token')}`,
@@ -86,7 +86,7 @@ export function Projects() {
 
 
     try {
-      const res = await fetch(`http://localhost:3333/${username}/projects/onHold/${projectId}`, {
+      const res = await fetch(`https://erp-backend-service-465064762453.me-west1.run.app/${username}/projects/onHold/${projectId}`, {
         method: 'PUT',
         headers: {
           Authorization: `Bearer ${localStorage.getItem('token')}`,

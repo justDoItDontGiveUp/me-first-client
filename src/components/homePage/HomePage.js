@@ -24,7 +24,7 @@ export function HomePage() {
   const token = localStorage.getItem("token");
   const fetchRecentProjects = async () => {
     try {
-      const res = await fetch(`http://localhost:3333/${username}/projects/recent`, {
+      const res = await fetch(`https://erp-backend-service-465064762453.me-west1.run.app/${username}/projects/recent`, {
         method: "GET",
         headers: {
           Authorization: `Bearer ${token}`,
@@ -45,7 +45,7 @@ export function HomePage() {
   const deleteProject = async (projectId) => {
     if (!window.confirm("Are you sure you want to delete this project?")) return;
     try {
-      const res = await fetch(`http://localhost:3333/${username}/projects/${projectId}`, {
+      const res = await fetch(`https://erp-backend-service-465064762453.me-west1.run.app/${username}/projects/${projectId}`, {
         method: "DELETE",
         headers: {
           Authorization: `Bearer ${token}`,

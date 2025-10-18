@@ -22,7 +22,7 @@ export function AddOrEditTodoForm({ todo = null, onSuccess }) {
 
   useEffect(() => {
     const fetchUsers = async () => {
-      const res = await fetch(`http://localhost:3333/${username}/users`, {
+      const res = await fetch(`https://erp-backend-service-465064762453.me-west1.run.app/${username}/users`, {
         headers: {
           Authorization: `Bearer ${localStorage.getItem("token")}`,
         },
@@ -37,8 +37,8 @@ export function AddOrEditTodoForm({ todo = null, onSuccess }) {
     e.preventDefault();
     const isEdit = !!todo;
     const url = isEdit
-      ? `http://localhost:3333/${username}/todos/${todo.todo_id}`
-      : `http://localhost:3333/${username}/todos`;
+      ? `https://erp-backend-service-465064762453.me-west1.run.app/${username}/todos/${todo.todo_id}`
+      : `https://erp-backend-service-465064762453.me-west1.run.app/${username}/todos`;
     const method = isEdit ? "PUT" : "POST";
 
     const res = await fetch(url, {

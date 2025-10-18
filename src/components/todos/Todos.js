@@ -18,7 +18,7 @@ export function Todos() {
   const fetchTodos = async () => {
     try {
       const token = localStorage.getItem("token");
-      const res = await fetch(`http://localhost:3333/${username}/todos`, {
+      const res = await fetch(`https://erp-backend-service-465064762453.me-west1.run.app/${username}/todos`, {
         headers: {
           Authorization: `Bearer ${token}`,
           "Content-Type": "application/json",

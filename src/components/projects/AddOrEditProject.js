@@ -21,8 +21,8 @@ export function AddOrEditProject({ project, onSuccess }) {
 
     const method = project ? 'PUT' : 'POST';
     const url = project
-      ? `http://localhost:3333/projects/${project.project_id}` // ← עדכון
-      : `http://localhost:3333/${username}/projects/${projectStatus}`; // ← יצירה
+      ? `https://erp-backend-service-465064762453.me-west1.run.app/projects/${project.project_id}` // ← עדכון
+      : `https://erp-backend-service-465064762453.me-west1.run.app/${username}/projects/${projectStatus}`; // ← יצירה
 
     const body = {
       project_name: title,
@@ -58,7 +58,7 @@ export function AddOrEditProject({ project, onSuccess }) {
 
   const createFolderForProjectDocs = async (project_id) => {
     try {
-      await fetch(`http://localhost:3333/${username}/documents/newFolder`, {
+      await fetch(`https://erp-backend-service-465064762453.me-west1.run.app/${username}/documents/newFolder`, {
         method: 'POST',
         headers: {
           'Authorization': `Bearer ${localStorage.getItem('token')}`,

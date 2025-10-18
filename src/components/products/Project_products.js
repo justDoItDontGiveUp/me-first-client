@@ -12,7 +12,7 @@ export function Project_products() {
   const fetchProjectProducts = async () => {
     try {
       const token = localStorage.getItem("token");
-      const res = await fetch(`http://localhost:3333/${username}/project_products/${projectId}/products`, {
+      const res = await fetch(`https://erp-backend-service-465064762453.me-west1.run.app/${username}/project_products/${projectId}/products`, {
         headers: { Authorization: `Bearer ${token}` },
       });
       if (!res.ok) throw new Error("שגיאה בקבלת מוצרים לפרויקט");

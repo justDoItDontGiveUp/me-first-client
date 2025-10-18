@@ -15,7 +15,7 @@ export function GoogleDocViewer({ projectId, docType, stageId, token, user_id })
 
     const fetchDocUrl = async () => {
         try {
-            const res = await fetch(`http://localhost:3333/${username}/documents/getFilePath/${projectId}/${docType}`, {
+            const res = await fetch(`https://erp-backend-service-465064762453.me-west1.run.app/${username}/documents/getFilePath/${projectId}/${docType}`, {
                 method: 'GET',
                 headers: {
                     Authorization: `Bearer ${token}`,
