@@ -14,6 +14,8 @@ export const Login = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+      console.log("Login form submitted"); // <--- הוסיפי שורה זו
+
     setError('');
     if (!username || !password) {
       setError('Username and password are required');
@@ -21,11 +23,16 @@ export const Login = () => {
     }
 
     try {
+      console.log("Sending request...");
+
       const response = await fetch('https://erp-backend-service-465064762453.me-west1.run.app/login', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ username, password }),
+
       });
+              console.log("Sending request...");
+
 
       const data = await response.json();
       if (!response.ok) throw new Error(data.error || 'Login failed');
