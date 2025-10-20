@@ -31,7 +31,7 @@ export const Login = () => {
         body: JSON.stringify({ username, password }),
 
       });
-              console.log("2Sending request...");
+              console.log(response);
 
 
       const data = await response.json();
