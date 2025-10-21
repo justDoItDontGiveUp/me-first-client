@@ -80,7 +80,7 @@ export const Login = () => {
 
 } catch (err) {
   setError(err.message || 'Invalid username or password');
-};
+}};
   return (
     <div className="login-container">
       <form onSubmit={handleSubmit} className="login-form">
