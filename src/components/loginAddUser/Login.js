@@ -22,29 +22,65 @@ export const Login = () => {
       return;
     }
 
-    try {
-      console.log("Sending request...");
+  //   try {
+  //     console.log("Sending request...");
 
-      const response = await fetch('https://erp-backend-service-465064762453.me-west1.run.app/login', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ username, password }),
+  //     const response = await fetch('https://erp-backend-service-465064762453.me-west1.run.app/login', {
+  //       method: 'POST',
+  //       headers: { 'Content-Type': 'application/json' },
+  //       body: JSON.stringify({ username, password }),
 
-      });
-              console.log(response);
+  //     });
+  //             console.log(response);
 
 
-      const data = await response.json();
-      if (!response.ok) throw new Error(data.error || 'Login failed');
-      if (!data.token) throw new Error('No token received from server');
+  //     const data = await response.json();
+  //     if (!response.ok) throw new Error(data.error || 'Login failed');
+  //     if (!data.token) throw new Error('No token received from server');
 
-      login(data.token);
-      navigate(`/${username.replaceAll(" ", "_")}/home`);
-    } catch (err) {
-      setError(err.message || 'Invalid username or password');
-    }
-  };
+  //     login(data.token);
+  //     navigate(`/${username.replaceAll(" ", "_")}/home`);
+  //   } catch (err) {
+  //     setError(err.message || 'Invalid username or password');
+  //   }
+  // };
 
+  try {
+  console.log("Sending request...");
+
+  const response = await fetch('https://erp-backend-service-465064762453.me-west1.run.app/login', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ username, password }),
+  });
+
+  console.log(response); // מציג את אובייקט התגובה
+
+  // 🧩 שלב 1: קראי את התגובה כטקסט גולמי
+  const text = await response.text();
+  console.log("Raw response:", text); // ראי מה באמת חזר מהשרת
+
+  // 🧩 שלב 2: נסי להמיר ל־JSON
+  let data;
+  try {
+    data = JSON.parse(text);
+  } catch {
+    console.error("Response is not valid JSON");
+    setError("Server returned invalid response");
+    return;
+  }
+
+  // 🧩 שלב 3: בדקי תקינות התגובה
+  if (!response.ok) throw new Error(data.error || 'Login failed');
+  if (!data.token) throw new Error('No token received from server');
+
+  // 🧩 שלב 4: המשך תהליך התחברות
+  login(data.token);
+  navigate(`/${username.replaceAll(" ", "_")}/home`);
+
+} catch (err) {
+  setError(err.message || 'Invalid username or password');
+};
   return (
     <div className="login-container">
       <form onSubmit={handleSubmit} className="login-form">
